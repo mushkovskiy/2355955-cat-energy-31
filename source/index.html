@@ -6,6 +6,10 @@
   <title>Название проекта</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="icon" href="favicons/safari-pinned-tab.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -15,10 +19,15 @@
     <div class="container">
 
       <a class="page-header__logo-image-link" href="index.html" aria-label="Логотип">
-        <img class="page-header__logo-image" width="33" height="38" src="./images/logo-image-mobile.svg" alt="Логотип Cat energy">
+        <picture>
+          <source type="image/svg+xml" media="(min-width:1300px)" srcset="images/logos/logo-image-desktop.svg" width="70" height="59">
+          <source type="image/svg+xml" media="(min-width:768px)" srcset="images/logos/logo-image-desktop.svg" width="60" height="50">
+          <img class="page-header__logo-image" width="33" height="38" src="./images/logos/logo-image-mobile.svg" alt="Логотип Cat energy">
+        </picture>
       </a>
       <a class="page-header__logo-text-link" href="index.html" aria-label="Логотип">
-        <img class="page-header__logo-text" width="101" height="18" src="./images/logo-text.svg" alt=" Логотип Cat energy">
+
+        <img class="page-header__logo-text" width="101" height="18" src="./images/logos/logo-text.svg" alt=" Логотип Cat energy">
       </a>
 
       <nav class="page-header__navigation page-navigation">
@@ -49,7 +58,11 @@
         <h1 class="hero__title">Функциональное
           питание для котов</h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
-        <img class="hero__image" width="280" height="270" src="./images/cat-food-mobile@1x.png" alt="Изображение корма для кота">
+        <picture>
+          <source type="image/png" media="(min-width:1300px)" srcset="./images/cat-food-promo/cat-food-promo-desktop@1x.png 1x, ./images/cat-food-promo/cat-food-promo-desktop@2x.png 2x" width="552" height="449">
+          <source type="image/png" media="(min-width:768px)" srcset="./images/cat-food-promo/cat-food-promo-tablet@1x.png 1x, ./images/cat-food-promo/cat-food-promo-tablet@2x.png 2x" width="709" height="608">
+          <img class="hero__image" width="280" height="270" src="./images/cat-food-promo/cat-food-promo-mobile@1x.png" alt="Изображение корма для кота" srcset="./images/cat-food-promo/cat-food-promo-mobile@2x.png 2x">
+        </picture>
 
         <a class="button" href="#">
           Выбрать программу
@@ -128,10 +141,17 @@
         </div>
         <div class="showcase__comparison comparison">
           <div class="comparison__after-image-wrapper">
-            <img class="comparison__after-image" width="100" height="100" src="./images/cat-mobile-after@1x.png" alt="Изображение кота после похудения">
+            <picture>
+              <source type="image/png" media="(min-width:768px)" srcset="./images/cat-after/cat-after-tablet@1x.png 1x, ./images/cat-after/cat-after-tablet@2x.png 2x" width="560" height="512">
+              <img class="comparison__after-image" width="280" height="256" src="./images/cat-after/cat-after-mobile@1x.png" alt="Изображение кота после похудения" srcset="./images/cat-after/cat-after-mobile@2x.png">
+            </picture>
           </div>
           <div class="comparison__before-image-wrapper">
-            <img class="comparison__before-image" width="100" height="100" src="./images/cat-mobile-before@1x.png" alt="Изображение кота до похудения">
+            <picture>
+              <source type="image/png" media="(min-width:768px)" srcset="./images/cat-before/cat-before-tablet@1x.png 1x, ./images/cat-before/cat-before-tablet@2x.png 2x" width="560" height="512">
+              <img class="comparison__before-image" width="280" height="256" src="./images/cat-before/cat-before-mobile@1x.png" alt="Изображение кота до похудения" srcset="./images/cat-before/cat-before-mobile@2x.png">
+
+            </picture>
             <div class="comparison__divider"></div>
           </div>
         </div>
