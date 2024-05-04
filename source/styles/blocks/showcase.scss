@@ -1,0 +1,30 @@
+.showcase {
+  font-weight: 400;
+}
+
+.showcase__title {
+  font-size: 36px;
+  line-height: 1.1em;
+}
+
+.showcase__description {
+  font-family: $secondary-font, $fallback-font;
+  font-size: 14px;
+  line-height: 1.28em;
+  color: $special-dark;
+}
+
+.showcase__fact-term {
+  font-family: $secondary-font, $fallback-font;
+  font-size: 12px;
+  color: $special-dark;
+}
+
+.showcase__fact-desc {
+  font-size: 24px;
+}
+
+.showcase__food-costs {
+  font-size: 14px;
+  line-height: 1.42em;
+}

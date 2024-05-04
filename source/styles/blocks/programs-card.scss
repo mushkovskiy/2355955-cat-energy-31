@@ -1,0 +1,21 @@
+.programs-card {
+  font-weight: 400;
+}
+
+.programs-card__title {
+  font-size: 24px;
+  line-height: 1.54em;
+}
+
+.programs-card__description {
+  font-family: $secondary-font, $fallback-font;
+  font-size: 14px;
+  line-height: 1.28em;
+  color: $special-dark;
+}
+
+.programs-card__link {
+  color: $primary-black;
+  text-decoration: none;
+  text-transform: uppercase;
+}

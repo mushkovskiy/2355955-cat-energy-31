@@ -1,0 +1,14 @@
+.products-card {
+  font-weight: 400;
+}
+
+.products-card__title {
+
+  line-height: 1.25em;
+  color: $special-dark-brown;
+}
+
+.products-card-text {
+  font-family: $secondary-font, $fallback-font;
+  color: $special-dark;
+}

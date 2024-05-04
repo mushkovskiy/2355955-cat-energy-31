@@ -1,0 +1,14 @@
+.contacts {
+  font-weight: 400;
+}
+
+.contacts__title {
+  line-height: 1.25em;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  font-family: $secondary-font, $secondary-font;
+  color: $special-dark;
+  line-height: 1.25em;
+}

@@ -1,0 +1,13 @@
+.explanation {
+  font-weight: 400;
+}
+
+.explanation__title {
+  font-size: 36px;
+  line-height: 1.1em;
+}
+
+.explanation__item-description {
+  font-family: $secondary-font, $fallback-font;
+  color: $special-dark;
+}

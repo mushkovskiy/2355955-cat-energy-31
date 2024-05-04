@@ -1,0 +1,15 @@
+.button {
+  font-family: $primary-font, $fallback-font;
+  font-weight: 400;
+  line-height: 1.25em;
+  font-size: 16px;
+  color: $primary-white;
+  background-color: $basic-green;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button--secondary {
+  background-color: $basic-grey;
+  color: $special-dark;
+}

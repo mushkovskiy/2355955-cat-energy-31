@@ -1,0 +1,17 @@
+.attributes {
+  font-weight: 400;
+}
+
+.attributes__term {
+  font-family: $secondary-font, $fallback-font;
+  font-size: 12px;
+  line-height: 1.33em;
+  color: $special-dark;
+}
+
+.attributes__desc {
+  font-family: $secondary-font, $fallback-font;
+  font-size: 12px;
+  line-height: 1.33em;
+  color: $special-dark;
+}
