@@ -6,10 +6,14 @@
   <title>Каталог</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="icon" href="favicons/safari-pinned-tab.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body class="catalog-body">
+<body class="catalog__body">
 
   <header class="page-header">
     <div class="container">
@@ -49,10 +53,10 @@
 
   <main class="main-container">
 
-    <section class="catalog">
+    <section class="product-catalog">
       <div class="container">
-        <h1 class="catalog__title">Каталог продукции</h1>
-        <ul class="catalog__products-list">
+        <h1 class="product-catalog__title">Каталог продукции</h1>
+        <ul class="product-catalog__products-list">
           <li class="catalog__products-item products-card">
             <div class="products-card__container">
               <div class="products-card__wrapper">
@@ -80,7 +84,7 @@
                     <dd class="attributes__desc">700 ₽</dd>
                   </div>
                 </dl>
-                <a class="primary-button" href="#" aria-label="Кнопка заказа корма">
+                <a class="button" href="#" aria-label="Кнопка заказа корма">
                   Заказать
                 </a>
               </div>
@@ -113,7 +117,7 @@
                     <dd class="attributes__desc">1000 ₽</dd>
                   </div>
                 </dl>
-                <a class="primary-button" href="#" aria-label="Кнопка заказа корма">
+                <a class="button" href="#" aria-label="Кнопка заказа корма">
                   Заказать
                 </a>
               </div>
@@ -146,7 +150,7 @@
                     <dd class="attributes__desc">700 ₽</dd>
                   </div>
                 </dl>
-                <a class="primary-button" href="#" aria-label="Кнопка заказа корма">
+                <a class="button" href="#" aria-label="Кнопка заказа корма">
                   Заказать
                 </a>
               </div>
@@ -181,7 +185,7 @@
                     </div>
                   </dl>
                 </div>
-                <a class="primary-button" href="#" aria-label="Кнопка заказа корма">
+                <a class="button" href="#" aria-label="Кнопка заказа корма">
                   Заказать
                 </a>
               </div>
@@ -216,7 +220,7 @@
                     </div>
                   </dl>
                 </div>
-                <a class="primary-button" href="#" aria-label="Кнопка заказа корма">
+                <a class="button" href="#" aria-label="Кнопка заказа корма">
                   Заказать
                 </a>
               </div>
@@ -251,7 +255,7 @@
                     </div>
                   </dl>
                 </div>
-                <a class="primary-button" href="#" aria-label="Кнопка заказа корма">
+                <a class="button" href="#" aria-label="Кнопка заказа корма">
                   Заказать
                 </a>
               </div>
@@ -286,13 +290,13 @@
                     </div>
                   </dl>
                 </div>
-                <a class="primary-button" href="#" aria-label="Кнопка заказа корма">
+                <a class="button" href="#" aria-label="Кнопка заказа корма">
                   Заказать
                 </a>
               </div>
             </div>
           </li>
-          <li class="catalog__products-item products-card  products-card-empty">
+          <li class="catalog__products-item products-card  products-card--empty">
             <div class="products-card__container">
               <div class="products-card__wrapper">
                 <div class="products-card__image-wrapper">
@@ -301,7 +305,7 @@
                 <p class="products-card__title">
                   Показать еще 100500 товаров
                 </p>
-                <p class="products-card-text"></p>
+                <p class="products-card-text">На самом деле вкусов гораздо больше!</p>
                 <a class="button button--secondary" href="#" aria-label="Кнопка заказа корма">
                   Показать все
                 </a>
@@ -364,7 +368,7 @@
               Укажите ваш email
             </label>
             <input id="email" type="email" placeholder="кuklachev@gmail.com" required name="email">
-            <button class="button button--primary button--submit" type="submit">
+            <button class="button  button--submit" type="submit">
               Подписаться
             </button>
           </form>

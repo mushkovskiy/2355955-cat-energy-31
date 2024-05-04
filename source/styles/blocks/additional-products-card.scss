@@ -1,0 +1,22 @@
+.additional-products-card {
+  font-weight: 400;
+}
+
+.additional-products-card__title {
+  line-height: 1.12em;
+  color: $special-dark-brown;
+}
+
+.additional-products-card__text {
+  font-family: $secondary-font, $fallback-font;
+  font-size: 14px;
+  color: $special-dark;
+  line-height: 1em;
+}
+
+.additional-products__gift-title {
+  font-family: $secondary-font, $fallback-font;
+  font-size: 20px;
+  line-height: 1.25;
+  color: $primary-white;
+}

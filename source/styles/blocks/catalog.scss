@@ -1,0 +1,10 @@
+.catalog {
+  font-weight: 400;
+}
+
+.catalog__body {
+  font-family: $primary-font, $secondary-font;
+  font-size: 16px;
+  line-height: 1em;
+  color: $primary-black;
+}

@@ -1,0 +1,10 @@
+.page {
+  width: auto;
+}
+
+.page__body {
+  font-family: $primary-font, $fallback-font;
+  font-size: 16px;
+  line-height: 1em;
+  color: $primary-black;
+}

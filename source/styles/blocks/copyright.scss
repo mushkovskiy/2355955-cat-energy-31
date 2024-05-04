@@ -1,0 +1,9 @@
+.copyright {
+  font-weight: 400;
+}
+
+.copyright__text {
+  font-family: $secondary-font, $fallback-font;
+  line-height: 1.25em;
+  color: $special-dark;
+}

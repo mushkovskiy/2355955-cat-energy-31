@@ -1,0 +1,10 @@
+.newsletter {
+  font-weight: 400;
+}
+
+.newsletter__form input::placeholder {
+  font-size: 20px;
+  color: $special-dark;
+  text-transform: capitalize;
+  line-height: 1em;
+}
