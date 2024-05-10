@@ -1,13 +1,77 @@
 .explanation {
   font-weight: 400;
+  padding-bottom: 50px;
 }
 
 .explanation__title {
   font-size: 36px;
   line-height: 1.1em;
+  margin-bottom: 40px;
 }
 
 .explanation__item-description {
+  margin-left: 80px;
   font-family: $secondary-font, $fallback-font;
   color: $special-dark;
 }
+
+.explanation__list {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 20px;
+  list-style-type: none;
+  max-width: 450px;
+}
+
+.explanation__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-color: $primary-white;
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.explanation__item--ingredients::after {
+  width: 30px;
+  height: 32px;
+  mask-image: url("../../icons/stack.svg#leaf");
+}
+
+.explanation__item--form::after {
+  width: 30px;
+  height: 32px;
+  mask-image: url("../../icons/stack.svg#powder");
+}
+
+.explanation__item--diet::after {
+  width: 30px;
+  height: 32px;
+  mask-image: url("../../icons/stack.svg#cutlery");
+}
+
+.explanation__item--results::after {
+  width: 30px;
+  height: 32px;
+  mask-image: url("../../icons/stack.svg#alarm-clock");
+}
+

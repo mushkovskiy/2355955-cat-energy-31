@@ -1,17 +1,37 @@
 .additional-products-card {
+  display: grid;
+  row-gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
   font-weight: 400;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $special-grey;
 }
 
 .additional-products-card__title {
+
+  text-transform: uppercase;
   line-height: 1.12em;
   color: $special-dark-brown;
 }
 
-.additional-products-card__text {
+.additional-products-card__term,
+.additional-products-card__desc {
   font-family: $secondary-font, $fallback-font;
   font-size: 14px;
   color: $special-dark;
   line-height: 1em;
+}
+
+.additional-products-card__term {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.additional-products-card__desc {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
 }
 
 .additional-products__gift-title {
@@ -19,4 +39,9 @@
   font-size: 20px;
   line-height: 1.25;
   color: $primary-white;
+}
+
+.additional-products-card__button {
+  grid-column: 1/ -1;
+  grid-row: 3;
 }

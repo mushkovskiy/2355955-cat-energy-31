@@ -5,6 +5,7 @@
 @import "./common/global.scss";
 
 /* BLOCKS common */
+@import "./blocks/visibility-hidden.scss";
 @import "./blocks/container.scss";
 @import "./blocks/button.scss";
 
@@ -25,12 +26,14 @@
 @import "./blocks/products-card.scss";
 @import "./blocks/attributes.scss";
 @import "./blocks/additional-products.scss";
+@import "./blocks/additional-products-card.scss";
 @import "./blocks/sales.scss";
 @import "./blocks/newsletter.scss";
 
 /* both pages */
 @import "./blocks/page-header.scss";
 @import "./blocks/page-footer.scss";
+@import "./blocks/location.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/social.scss";
 @import "./blocks/copyright.scss";

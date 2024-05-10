@@ -4,3 +4,16 @@
 ::before {
   box-sizing: border-box;
 }
+
+body,
+p,
+h1,
+h2,
+h3,
+ul,
+ol,
+dd,
+dl {
+  margin: 0;
+  padding: 0;
+}

@@ -1,10 +1,41 @@
 .page-navigation {
+
   font-weight: 400;
 }
 
+.page-navigation__toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.page-navigation__list {
+  list-style-type: none;
+  position: absolute;
+  top: 66px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  width: 100%;
+  background-color: $primary-white;
+}
+
+
+.page-navigation__item {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid $basic-grey;
+}
+
 .page-navigation__item-link {
+  text-align: center;
+  display: block;
+  padding: 22px 10px 24px;
   font-size: 20px;
   color: $primary-black;
   text-decoration: none;
   line-height: 1em;
+  text-transform: uppercase;
 }
+

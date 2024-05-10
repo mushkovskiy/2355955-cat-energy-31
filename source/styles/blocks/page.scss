@@ -8,3 +8,10 @@
   line-height: 1em;
   color: $primary-black;
 }
+
+.page__container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  max-width: 1300px;
+}
