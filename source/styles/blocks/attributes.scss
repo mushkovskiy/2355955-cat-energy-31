@@ -1,5 +1,12 @@
 .attributes {
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
+}
+
+.attributes__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .attributes__term {

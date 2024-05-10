@@ -4,9 +4,12 @@
   line-height: 1.25em;
   font-size: 16px;
   color: $primary-white;
-  background-color: $basic-green;
   text-transform: uppercase;
   text-decoration: none;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: $basic-green;
+  text-align: center;
 }
 
 .button--secondary {

@@ -1,8 +1,41 @@
 .product-catalog {
+  margin-top: 27px;
   font-weight: 400;
 }
 
 .product-catalog__title {
+  position: relative;
+  padding-bottom: 41px;
   font-size: 36px;
   line-height: 1em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 100vw;
+    height: 1px;
+    background-color: $basic-grey-brown;
+  }
+}
+
+
+.product-catalog__products-list {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  list-style-type: none;
+}
+
+.catalog__products-item {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 100vw;
+    height: 1px;
+    background-color: $special-grey-light;
+  }
 }
