@@ -1,11 +1,28 @@
 .sales {
+
+  padding-top: 40px;
   font-weight: 400;
 }
 
 .sales__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 24px;
+  line-height: 1em;
+  margin-bottom: 32px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 108px;
+    height: 2px;
+    background-color: $basic-green;
+  }
 }
 
 .sales__description {
+  text-align: center;
   line-height: 1.5em;
+  margin-bottom: 24px;
 }

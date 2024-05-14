@@ -82,4 +82,19 @@
   text-decoration: none;
   text-transform: uppercase;
   margin-top: 15px;
+
+  & svg {
+    position: relative;
+    right: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(5px);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
+

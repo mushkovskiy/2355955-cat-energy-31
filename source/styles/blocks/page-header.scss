@@ -8,3 +8,23 @@
   font-weight: 400;
   border-bottom: 1px solid $basic-grey-brown;
 }
+
+.page-header__logo-image-link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__logo-text {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
