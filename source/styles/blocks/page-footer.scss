@@ -35,6 +35,15 @@
     height: 24px;
     background-color: $primary-black;
     mask-image: url("../../images/logos/logo-text.svg");
+    mask-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    background-color: $special-dark-hover;
+  }
+
+  &:active::after {
+    background-color: $special-dark-active;
   }
 }
 

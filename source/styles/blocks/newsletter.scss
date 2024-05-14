@@ -2,9 +2,22 @@
   font-weight: 400;
 }
 
-.newsletter__form input::placeholder {
+.newsletter__form {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter__form input {
+  font-family: inherit;
+  width: 100%;
+  height: 56px;
+  text-indent: 13px;
   font-size: 20px;
   color: $special-dark;
   text-transform: uppercase;
   line-height: 1em;
+
+  border-color: $special-grey;
 }

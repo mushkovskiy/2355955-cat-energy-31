@@ -10,9 +10,22 @@
   padding: 10px 15px;
   background-color: $basic-green;
   text-align: center;
+  border: none;
+
+  &:hover {
+    background-color: $basic-green-hover;
+  }
+
+  &:active {
+    color: #8ec36d;
+  }
 }
 
 .button--secondary {
   background-color: $basic-grey;
   color: $special-dark;
+
+  &:hover {
+    background-color: $special-grey-hover;
+  }
 }
