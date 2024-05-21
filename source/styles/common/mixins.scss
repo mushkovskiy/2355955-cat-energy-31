@@ -7,3 +7,10 @@
     src: $font-src;
   }
 }
+
+
+@mixin vp-767 {
+  @media (min-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}

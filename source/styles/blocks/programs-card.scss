@@ -15,6 +15,15 @@
     height: 50px;
     border-radius: 50%;
     background-color: $basic-green;
+
+    @include vp-767 {
+      position: static;
+      grid-column: 2/3;
+      grid-row: 1 / 4;
+      width: 200px;
+      height: 200px;
+      place-self: center center;
+    }
   }
 
 
@@ -30,6 +39,17 @@
     top: 18px;
     mask-image: url("../../icons/stack.svg#cat");
     mask-repeat: no-repeat;
+
+    @include vp-767 {
+      position: relative;
+      grid-column: 2/3;
+      grid-row: 1 / 4;
+      top: auto;
+      left: auto;
+      width: 140px;
+      height: 194px;
+      place-self: center center;
+    }
   }
 
   &:last-child::before {
@@ -44,6 +64,26 @@
     top: 32px;
     mask-image: url("../../icons/stack.svg#tiger");
     mask-repeat: no-repeat;
+
+    @include vp-767 {
+      position: relative;
+      grid-column: 2/3;
+      grid-row: 1 / 4;
+      top: auto;
+      left: auto;
+      width: 280px;
+      height: 112px;
+      place-self: center center;
+    }
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 20px;
+    padding: 77px 30px 53px 53px;
+    width: 100%;
   }
 }
 
@@ -52,6 +92,16 @@
   line-height: 1.54em;
   margin-left: 70px;
   margin-bottom: 29px;
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 1;
+    grid-column: 1/2;
+    justify-self: flex-start;
+    margin: 0;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
 }
 
 .programs-card__description {
@@ -62,6 +112,7 @@
   color: $special-dark;
   padding-bottom: 23px;
 
+
   &::after {
     content: "";
     display: block;
@@ -70,6 +121,21 @@
     width: 100%;
     height: 1px;
     background-color: $special-grey;
+  }
+
+
+  @include vp-767 {
+    grid-column: 1/2;
+    justify-self: flex-start;
+    font-size: 16px;
+    line-height: 1.5em;
+    width: 340px;
+    padding-bottom: 0;
+    margin-bottom: 48px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -95,6 +161,12 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @include vp-767 {
+    grid-column: 1/2;
+    font-size: 20px;
+    gap: 25px;
   }
 }
 

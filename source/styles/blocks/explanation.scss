@@ -1,18 +1,33 @@
 .explanation {
   font-weight: 400;
   padding-bottom: 50px;
+
+  @include vp-767 {
+    border-bottom: 1px solid $basic-grey-brown;
+  }
 }
 
 .explanation__title {
   font-size: 36px;
   line-height: 1.1em;
   margin-bottom: 40px;
+
+  @include vp-767 {
+    font-size: 60px;
+    line-height: 1em;
+  }
 }
 
 .explanation__item-description {
   margin-left: 80px;
   font-family: $secondary-font, $fallback-font;
   color: $special-dark;
+
+  @include vp-767 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+  }
 }
 
 .explanation__list {
@@ -21,6 +36,14 @@
   gap: 20px;
   list-style-type: none;
   max-width: 450px;
+  counter-reset: explanation;
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .explanation__item {
@@ -28,7 +51,7 @@
   display: flex;
   align-items: center;
   min-height: 60px;
-
+  counter-increment: explanation;
 
   &::before {
     content: "";
@@ -37,41 +60,54 @@
     width: 60px;
     height: 60px;
     background-color: $basic-green;
+    background-size: 30px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include vp-767 {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      grid-column: 1 / 1;
+      grid-row: 1;
+    }
   }
 
   &::after {
-    content: "";
+    content: counter(explanation);
+    position: relative;
     display: block;
-    position: absolute;
-    z-index: 1;
-    background-color: $primary-white;
-    top: 50%;
-    left: 30px;
-    transform: translate(-50%, -50%);
+    grid-column: 2;
+    grid-row: 1 /-1;
+    font-size: 280px;
+    justify-self: center;
+    color: $basic-grey;
+    z-index: -1;
+  }
+
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 31px 40px;
+    width: 230px;
   }
 }
 
-.explanation__item--ingredients::after {
-  width: 30px;
-  height: 32px;
-  mask-image: url("../../icons/stack.svg#leaf");
+.explanation__item--ingredients::before {
+  background-image: url("../../icons/stack.svg#leaf");
 }
 
-.explanation__item--form::after {
-  width: 30px;
-  height: 32px;
-  mask-image: url("../../icons/stack.svg#powder");
+.explanation__item--form::before {
+  background-image: url("../../icons/stack.svg#powder");
 }
 
-.explanation__item--diet::after {
-  width: 30px;
-  height: 32px;
-  mask-image: url("../../icons/stack.svg#cutlery");
+.explanation__item--diet::before {
+  background-image: url("../../icons/stack.svg#cutlery");
 }
 
-.explanation__item--results::after {
-  width: 30px;
-  height: 32px;
-  mask-image: url("../../icons/stack.svg#alarm-clock");
+.explanation__item--results::before {
+  background-image: url("../../icons/stack.svg#alarm-clock");
 }
 

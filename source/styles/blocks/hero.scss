@@ -14,6 +14,29 @@
   background-position: center top;
   padding-top: 27px;
   margin-bottom: 20px;
+
+  @include vp-767 {
+    background-image: none;
+    color: $primary-black;
+    position: relative;
+    min-height: 800px;
+    align-items: flex-start;
+    padding-left: 120px;
+    padding-right: 120px;
+
+
+    & .button {
+      width: auto;
+      font-size: 26px;
+      padding: 14px 26px;
+    }
+  }
+}
+
+.hero__text-wrapper {
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
 }
 
 .hero__title {
@@ -21,6 +44,13 @@
   line-height: 1em;
   text-align: center;
   margin-bottom: 25px;
+
+  @include vp-767 {
+    font-size: 60px;
+    width: 420px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .hero__slogan {
@@ -29,4 +59,19 @@
   line-height: 1em;
   text-transform: uppercase;
   margin-bottom: 30px;
+
+  @include vp-767 {
+    font-size: 20px;
+    text-align: start;
+    margin-bottom: 0;
+  }
+}
+
+.hero__image {
+  @include vp-767 {
+    position: absolute;
+    bottom: -40px;
+    transform: translateX(-55px);
+    z-index: -1;
+  }
 }
