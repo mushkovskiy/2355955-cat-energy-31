@@ -1,4 +1,5 @@
 .additional-products-card {
+  position: relative;
   display: grid;
   row-gap: 15px;
   grid-template-columns: repeat(2, 1fr);
@@ -6,6 +7,24 @@
   font-weight: 400;
   padding-bottom: 20px;
   border-bottom: 1px solid $special-grey;
+
+  @include vp-767 {
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: repeat(2, auto);
+    column-gap: 50px;
+    border-bottom: none;
+    padding: 26px 38px 28px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -38px;
+      height: 1px;
+      width: 100vw;
+      background-color: $special-grey;
+    }
+  }
 }
 
 .additional-products-card__title {
@@ -13,6 +32,12 @@
   text-transform: uppercase;
   line-height: 1.12em;
   color: $special-dark-brown;
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 1;
+    grid-column: 1;
+  }
 }
 
 .additional-products-card__term,
@@ -26,22 +51,31 @@
 .additional-products-card__term {
   grid-column: 1;
   grid-row: 2;
+
+  @include vp-767 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 16px;
+    line-height: 1.2;
+    justify-self: end;
+  }
 }
 
 .additional-products-card__desc {
   grid-column: 2;
   grid-row: 2;
   justify-self: end;
+
+  @include vp-767 {
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 16px;
+    line-height: 1.2;
+  }
 }
 
-.additional-products__gift-title {
-  font-family: $secondary-font, $fallback-font;
-  font-size: 20px;
-  line-height: 1.25;
-  color: $primary-white;
-}
 
 .additional-products-card__button {
   grid-column: 1/ -1;
-  grid-row: 3;
+  grid-row: 2;
 }

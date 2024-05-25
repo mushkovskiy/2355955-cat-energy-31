@@ -3,6 +3,10 @@
   justify-content: center;
   font-weight: 400;
   margin-bottom: 20px;
+
+  @include vp-767 {
+    margin-bottom: 45px;
+  }
 }
 
 .nutrition-programs__list {

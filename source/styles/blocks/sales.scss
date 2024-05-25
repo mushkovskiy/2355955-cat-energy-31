@@ -2,6 +2,10 @@
 
   padding-top: 40px;
   font-weight: 400;
+
+  @include vp-767 {
+    padding: 80px 60px 80px 68px;
+  }
 }
 
 .sales__title {
@@ -12,12 +16,9 @@
   line-height: 1em;
   margin-bottom: 32px;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 108px;
-    height: 2px;
-    background-color: $basic-green;
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 1;
   }
 }
 
@@ -25,4 +26,9 @@
   text-align: center;
   line-height: 1.5em;
   margin-bottom: 24px;
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }

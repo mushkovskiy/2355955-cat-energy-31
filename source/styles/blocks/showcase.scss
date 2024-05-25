@@ -12,6 +12,7 @@
     background-image: linear-gradient(to top, $basic-grey-light 0%, $basic-grey-light 462px, transparent 462px, transparent 100%);
     background-size: 100% 100%;
     padding-bottom: 101px;
+    padding-top: 45px;
   }
 }
 
@@ -20,6 +21,11 @@
   grid-column: 1 / -1;
   font-size: 36px;
   line-height: 1.1em;
+
+  @include vp-767 {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .showcase__description {
@@ -28,10 +34,22 @@
   font-size: 14px;
   line-height: 1.28em;
   color: $special-dark;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 1.5em;
+    max-width: 710px;
+    margin-bottom: 55px;
+  }
 }
 
 .showcase__info {
   grid-column: 1 / -1;
+
+  @include vp-767 {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .showcase__facts {
@@ -50,10 +68,24 @@
   border: 1px solid $special-grey;
   border-radius: 3px;
   margin-bottom: 20px;
+
+
+  @include vp-767 {
+    width: 162px;
+    height: 77px;
+
+    &:first-child {
+      margin-right: 43px;
+    }
+  }
 }
 
 .showcase__comparison {
   grid-column: 1 / -1;
+
+  @include vp-767 {
+    justify-self: center;
+  }
 }
 
 .showcase__fact-term {
@@ -66,11 +98,27 @@
   line-height: 1em;
   color: $special-dark;
   text-transform: lowercase;
+
+
+  @include vp-767 {
+    font-size: 14px;
+    background-color: $primary-white;
+    width: fit-content;
+    position: relative;
+    bottom: -5px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 .showcase__fact-desc {
   order: -1;
   font-size: 24px;
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 1.23;
+  }
 }
 
 .showcase__food-costs {
@@ -79,4 +127,12 @@
   font-size: 14px;
   line-height: 1.42em;
   text-transform: uppercase;
+
+  @include vp-767 {
+    margin-left: auto;
+    font-size: 20px;
+    width: 175px;
+    text-align: end;
+    line-height: 1.5em;
+  }
 }

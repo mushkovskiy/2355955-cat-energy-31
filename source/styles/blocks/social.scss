@@ -3,6 +3,10 @@
   padding-bottom: 20px;
   font-weight: 400;
   border-bottom: 1px solid $basic-grey-brown;
+
+  @include vp-767 {
+    border: none;
+  }
 }
 
 .social__list {
