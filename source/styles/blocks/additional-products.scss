@@ -12,11 +12,11 @@
   border-bottom: 1px solid $special-grey;
   margin-bottom: 13px;
 
-  &::after {
-    content: "";
-    width: 34px;
-    height: 2px;
-    background-color: $basic-green;
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 1;
+    border-bottom: none;
+    padding-bottom: 80px;
   }
 }
 
@@ -25,6 +25,13 @@
   flex-direction: column;
   gap: 12px;
   margin-bottom: 35px;
+  overflow: hidden;
+
+  @include vp-767 {
+    border: 1px solid $special-grey;
+    gap: 0;
+    margin-bottom: 80px;
+  }
 }
 
 .additional-products__gift {
@@ -42,19 +49,42 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include vp-767 {
+    background-position: center 60%;
+  }
+
   &::after {
     content: "";
     width: 80px;
     height: 80px;
     background-image: url("../../icons/gift.svg");
     margin-bottom: 48px;
+
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+
+  @include vp-767 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    padding: 70px 77px;
   }
 }
 
 .additional-products__gift-title {
+  font-family: $secondary-font, $fallback-font;
+  color: $primary-white;
   order: 2;
   width: 200px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.25em;
+
+  @include vp-767 {
+    font-size: 16px;
+    width: 160px;
+  }
 }

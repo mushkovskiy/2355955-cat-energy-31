@@ -1,6 +1,10 @@
 .product-catalog {
   margin-top: 27px;
   font-weight: 400;
+
+  @include vp-767 {
+    margin-bottom: 74px;
+  }
 }
 
 .product-catalog__title {
@@ -18,14 +22,31 @@
     height: 1px;
     background-color: $basic-grey-brown;
   }
+
+  @include vp-767 {
+    font-size: 60px;
+    line-height: 1em;
+    padding-bottom: 150px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 
 .product-catalog__products-list {
   display: grid;
-
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   list-style-type: none;
+
+  @include vp-767 {
+    gap: 125px 60px;
+
+    & li:not(.products-card--empty)::after {
+      display: none;
+    }
+  }
 }
 
 .catalog__products-item {

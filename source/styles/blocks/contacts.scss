@@ -5,7 +5,13 @@
   justify-content: space-between;
 
   font-weight: 400;
+
+  @include vp-767 {
+    padding: 60px 70px;
+    width: 100%;
+  }
 }
+
 
 .contacts--grey {
   background-color: $basic-grey;
@@ -14,10 +20,24 @@
 .contacts__title {
   line-height: 1.25em;
   text-transform: uppercase;
+
+  @include vp-767 {
+    width: 165px;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
 }
 
 .contacts__text {
   font-family: $secondary-font, $fallback-font;
   color: $special-dark;
   line-height: 1.25em;
+
+
+  @include vp-767 {
+    width: 185px;
+    font-size: 18px;
+    line-height: 1.3em;
+    text-align: end;
+  }
 }

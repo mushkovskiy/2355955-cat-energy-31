@@ -7,6 +7,11 @@
   gap: 16px;
   flex-direction: column;
   align-items: center;
+
+  @include vp-767 {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
 .newsletter__form input {
@@ -17,7 +22,12 @@
   font-size: 20px;
   color: $special-dark;
   text-transform: uppercase;
+  filter: opacity(60);
   line-height: 1em;
+  border: 1px solid $special-grey;
+  padding: 0;
 
-  border-color: $special-grey;
+  @include vp-767 {
+    height: 56px;
+  }
 }
