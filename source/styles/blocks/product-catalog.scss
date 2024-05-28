@@ -1,6 +1,9 @@
 .product-catalog {
-  margin-top: 27px;
   font-weight: 400;
+}
+
+.product-catalog__container {
+  margin-top: 27px;
 
   @include vp-767 {
     margin-bottom: 74px;

@@ -1,5 +1,7 @@
 .location {
   position: relative;
+  max-width: 1300px;
+
 
   &::after {
     content: "";

@@ -1,9 +1,7 @@
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-weight: 400;
   color: $primary-white;
+
   background-image:
     image-set(url("../../images/hero/hero-mobile@1x.png") 1x, url("../../images/hero/hero-mobile@2x.png") 2x),
     linear-gradient(180deg, $gradient-hero 302px, transparent 302px);
@@ -12,6 +10,27 @@
     100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
+
+  @include vp-767 {
+    background-image: none;
+  }
+
+
+  @include vp-1300 {
+    background-image:
+      image-set(url("../../images/hero/hero-desktop@1x.png") 1x, url("../../images/hero/hero-desktop@2x.png") 2x),
+      linear-gradient(90deg, transparent 50%, $gradient-hero 50%);
+    background-size: 1040px 694px, 100%, 100%;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding-top: 27px;
   margin-bottom: 20px;
 
@@ -31,7 +50,15 @@
       padding: 14px 26px;
     }
   }
+
+
+  @include vp-1300 {
+    min-height: 694px;
+    padding-top: 224px;
+    padding-left: 190px;
+  }
 }
+
 
 .hero__text-wrapper {
   @include vp-767 {
@@ -70,8 +97,15 @@
 .hero__image {
   @include vp-767 {
     position: absolute;
-    bottom: -40px;
-    transform: translateX(-55px);
+    top: 30%;
+    left: 85px;
     z-index: -1;
+  }
+
+  @include vp-1300 {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 }

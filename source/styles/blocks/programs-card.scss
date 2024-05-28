@@ -24,6 +24,15 @@
       height: 200px;
       place-self: center center;
     }
+
+
+    @include vp-1300 {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100px;
+      height: 100px;
+      place-self: self-start start;
+    }
   }
 
 
@@ -50,6 +59,16 @@
       height: 194px;
       place-self: center center;
     }
+
+    @include vp-1300 {
+      position: relative;
+      transform: translate(25%, -6px);
+      grid-column: 1;
+      grid-row: 1;
+      width: 70px;
+      height: 97px;
+      place-self: center start;
+    }
   }
 
   &:last-child::before {
@@ -75,6 +94,15 @@
       height: 112px;
       place-self: center center;
     }
+
+    @include vp-1300 {
+      grid-column: 1;
+      grid-row: 1;
+      width: 135px;
+      height: 56px;
+      transform: translateX(-15%);
+      place-self: center start;
+    }
   }
 
   @include vp-767 {
@@ -84,6 +112,12 @@
     column-gap: 20px;
     padding: 77px 30px 53px 53px;
     width: 100%;
+  }
+
+  @include vp-1300 {
+    grid-template-columns: 100px 1fr;
+    padding: 41px 61px 55px 52px;
+    column-gap: 45px;
   }
 }
 
@@ -101,6 +135,13 @@
     margin: 0;
     margin-bottom: 24px;
     text-transform: uppercase;
+  }
+
+  @include vp-1300 {
+    grid-column: 2;
+    grid-row: 1;
+    place-self: center start;
+    margin: 0;
   }
 }
 
@@ -137,6 +178,14 @@
       display: none;
     }
   }
+
+  @include vp-1300 {
+    grid-column: -1/ 1;
+    grid-row: 2;
+    margin-bottom: 23px;
+    margin-top: 39px;
+    width: auto;
+  }
 }
 
 .programs-card__link {
@@ -167,6 +216,10 @@
     grid-column: 1/2;
     font-size: 20px;
     gap: 25px;
+  }
+
+  @include vp-1300 {
+    grid-column: -1/ 1;
   }
 }
 

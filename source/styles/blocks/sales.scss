@@ -1,7 +1,11 @@
 .sales {
 
-  padding-top: 40px;
+
   font-weight: 400;
+}
+
+.sales__container {
+  padding-top: 40px;
 
   @include vp-767 {
     padding: 80px 60px 80px 68px;
