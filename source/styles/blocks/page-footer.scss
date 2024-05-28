@@ -1,20 +1,26 @@
 .page-footer {
+  font-weight: 400;
+}
+
+.page-footer__container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, auto);
-  font-weight: 400;
+  padding: 0;
 }
 
 .page-footer__contacts {
   grid-column: 1 / -1;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-  max-width: 1300px;
+
+
+  @include vp-1300 {
+    position: absolute;
+    z-index: 1;
+  }
 }
 
 .page-footer__wrapper {
-
   grid-column: 1 / -1;
 
   @include vp-767 {
@@ -24,11 +30,17 @@
     background-color: $basic-grey;
     padding: 55px 30px;
   }
+
+  @include vp-1300 {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 .page__footer-location {
   grid-column: 1 / -1;
   height: 362px;
+
 
   @include vp-767 {
     height: 400px;

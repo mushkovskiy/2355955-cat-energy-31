@@ -1,7 +1,11 @@
 .nutrition-programs {
+  font-weight: 400;
+}
+
+.nutrition-programs__container {
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 
   @include vp-767 {
@@ -20,5 +24,10 @@
   @include vp-767 {
     max-width: 100%;
     width: 100%;
+  }
+
+  @include vp-1300 {
+    flex-direction: row;
+    gap: 80px;
   }
 }

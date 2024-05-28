@@ -3,10 +3,40 @@
 }
 
 .page__body {
+
   font-family: $primary-font, $fallback-font;
   font-size: 16px;
   line-height: 1em;
   color: $primary-black;
+
+  & .page-header {
+    @include vp-1300 {
+      position: absolute;
+
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  & .page-navigation__list {
+    @include vp-1300 {
+      background-color: $gradient-hero;
+    }
+  }
+
+  & .page-navigation__item-link {
+    @include vp-1300 {
+      color: $primary-white;
+    }
+  }
+
+  & .page-navigation__item-link[aria-current="page"]::after {
+    @include vp-1300 {
+      background-color: $primary-white;
+    }
+  }
 }
 
 .page__container {
@@ -18,5 +48,10 @@
   @include vp-767 {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  @include vp-1300 {
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }

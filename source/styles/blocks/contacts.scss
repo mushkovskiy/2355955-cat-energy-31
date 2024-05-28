@@ -1,14 +1,20 @@
 .contacts {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 20px;
   display: flex;
   justify-content: space-between;
-
   font-weight: 400;
 
   @include vp-767 {
     padding: 60px 70px;
     width: 100%;
+  }
+
+  @include vp-1300 {
+    width: 565px;
+    height: 200px;
+    background-color: $primary-white;
+    left: 110px;
+    top: 95px;
   }
 }
 
