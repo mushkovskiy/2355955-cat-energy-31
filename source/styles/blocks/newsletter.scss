@@ -1,5 +1,10 @@
 .newsletter {
   font-weight: 400;
+
+  @include vp-1300 {
+    width: 752px;
+    margin: 0 auto;
+  }
 }
 
 .newsletter__form {
