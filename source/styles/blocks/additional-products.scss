@@ -1,22 +1,72 @@
+
+
 .additional-products {
   font-weight: 400;
 }
 
+.additional-products__container {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  max-width: 1300px;
+
+  @include vp-767 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include vp-1300 {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.additional-products__wrapper {
+  @include vp-1300 {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    column-gap: 80px;
+  }
+}
+
 .additional-products__title {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 24px;
   line-height: 1em;
   padding-bottom: 36px;
   border-bottom: 1px solid $special-grey;
   margin-bottom: 13px;
+  gap: 30px;
 
   @include vp-767 {
     font-size: 32px;
     line-height: 1;
     border-bottom: none;
     padding-bottom: 80px;
+
+    :root {
+      --content-width: 708px;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: $basic-green;
+    flex-shrink: 0;
+    width: calc(50% - var(--content-width, 1160px) / 2 - 30px);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: $basic-green;
+    flex-grow: 1;
+    margin-top: 20px;
+    min-width: calc(50% - var(--content-width, 1160px) / 2 - 30px);
   }
 }
 
@@ -31,11 +81,15 @@
     border: 1px solid $special-grey;
     gap: 0;
     margin-bottom: 80px;
+    grid-column: 1;
+  }
+
+  @include vp-1300 {
+    border: none;
   }
 }
 
 .additional-products__gift {
-
   padding-top: 58px;
   height: 290px;
   width: 100%;
@@ -51,6 +105,18 @@
 
   @include vp-767 {
     background-position: center 60%;
+    grid-column: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    padding: 70px 77px;
+  }
+
+  @include vp-1300 {
+    flex-direction: column;
+    height: 288px;
+    padding: 55px 83px 43px;
   }
 
   &::after {
@@ -63,14 +129,6 @@
     @include vp-767 {
       margin-bottom: 0;
     }
-  }
-
-  @include vp-767 {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 200px;
-    padding: 70px 77px;
   }
 }
 

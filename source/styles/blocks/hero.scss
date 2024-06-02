@@ -21,7 +21,7 @@
       image-set(url("../../images/hero/hero-desktop@1x.png") 1x, url("../../images/hero/hero-desktop@2x.png") 2x),
       linear-gradient(90deg, transparent 50%, $gradient-hero 50%);
     background-size: 1040px 694px, 100%, 100%;
-    background-position: center right;
+    background-position: calc(50% + 520px) bottom;
     background-repeat: no-repeat;
   }
 }
@@ -55,7 +55,7 @@
   @include vp-1300 {
     min-height: 694px;
     padding-top: 224px;
-    padding-left: 190px;
+    padding-left: 150px;
   }
 }
 
@@ -103,9 +103,9 @@
   }
 
   @include vp-1300 {
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-170px, -50px);
+
     z-index: 1;
   }
 }

@@ -1,4 +1,9 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+:root {
+  --content-width: 1160px;
+}
+
 *,
 ::after,
 ::before {
@@ -23,3 +28,8 @@ source {
   display: contents;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
