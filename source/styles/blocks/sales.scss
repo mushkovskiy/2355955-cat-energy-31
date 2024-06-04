@@ -33,10 +33,34 @@
   font-size: 24px;
   line-height: 1em;
   margin-bottom: 32px;
+  position: relative;
+  width: fit-content;
 
   @include vp-767 {
     font-size: 32px;
     line-height: 1;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: $basic-green;
+    left: calc(100% + 40px);
+    top: 15px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: $basic-green;
+    right: calc(100% + 40px);
+    top: 15px;
   }
 }
 
