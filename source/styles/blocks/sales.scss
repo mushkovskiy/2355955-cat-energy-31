@@ -1,11 +1,13 @@
 .sales {
 
   padding-top: 40px;
+  overflow: hidden;
+
+  font-weight: 400;
 
   @include vp-767 {
-    padding: 80px 60px 80px 68px;
+    padding: 0;
   }
-  font-weight: 400;
 }
 
 .sales__container {
@@ -16,13 +18,14 @@
   max-width: 1300px;
 
   @include vp-767 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 80px 60px 80px 68px;
   }
 
   @include vp-1300 {
+    padding: 0;
     padding-left: 70px;
     padding-right: 70px;
+    padding-bottom: 104px;
   }
 }
 
@@ -39,6 +42,7 @@
   @include vp-767 {
     font-size: 32px;
     line-height: 1;
+    margin-bottom: 66px;
   }
 
   &::before {

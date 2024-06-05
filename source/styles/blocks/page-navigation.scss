@@ -103,6 +103,10 @@
       right: 2px;
     }
   }
+
+  @include vp-1300 {
+    font-size: 20px;
+  }
 }
 
 

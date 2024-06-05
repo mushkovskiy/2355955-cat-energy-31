@@ -46,8 +46,11 @@
     line-height: 1;
     border-bottom: none;
     padding-bottom: 80px;
-
     margin-left: 40px;
+  }
+
+  @include vp-1300 {
+    margin-left: 0;
   }
 
   &::before {
