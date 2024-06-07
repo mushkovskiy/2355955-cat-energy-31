@@ -5,6 +5,10 @@
   width: min(100%, 560px);
   display: grid;
   grid-template-columns: calc(var(--curtain-place) * 100%)  calc((1 - var(--curtain-place)) * 100%);
+
+  @include vp-1300 {
+    left: 25px;
+  }
 }
 
 .comparison__after-image {

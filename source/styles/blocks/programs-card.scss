@@ -116,8 +116,9 @@
 
   @include vp-1300 {
     grid-template-columns: 100px 1fr;
-    padding: 41px 61px 55px 52px;
-    column-gap: 45px;
+    padding: 44px 61px 65px 52px;
+    column-gap: 60px;
+    min-width: 570px;
   }
 }
 
@@ -182,8 +183,8 @@
   @include vp-1300 {
     grid-column: -1/ 1;
     grid-row: 2;
-    margin-bottom: 23px;
-    margin-top: 39px;
+    margin-bottom: 21px;
+    margin-top: 43px;
     width: auto;
   }
 }
@@ -191,12 +192,12 @@
 .programs-card__link {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
 
   color: $primary-black;
   text-decoration: none;
   text-transform: uppercase;
-  margin-top: 15px;
+  margin-top: 13px;
 
   & svg {
     position: relative;
@@ -220,5 +221,6 @@
 
   @include vp-1300 {
     grid-column: -1/ 1;
+    gap: 30px;
   }
 }

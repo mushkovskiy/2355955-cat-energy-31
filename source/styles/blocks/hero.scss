@@ -47,7 +47,7 @@
     & .button {
       width: auto;
       font-size: 26px;
-      padding: 14px 26px;
+      padding: 14px 27px;
     }
   }
 
@@ -55,7 +55,7 @@
   @include vp-1300 {
     min-height: 694px;
     padding-top: 224px;
-    padding-left: 150px;
+    padding-left: 120px;
     margin-bottom: 82px;
 
     & .button {
@@ -67,7 +67,7 @@
 
 .hero__text-wrapper {
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 }
 
@@ -109,7 +109,7 @@
 
   @include vp-1300 {
     left: 50%;
-    transform: translate(-170px, -50px);
+    transform: translate(-165px, -65px);
 
     z-index: 1;
   }
