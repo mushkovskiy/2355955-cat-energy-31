@@ -193,11 +193,12 @@
   display: flex;
   align-items: center;
   gap: 25px;
-
+  line-height: 1;
   color: $primary-black;
   text-decoration: none;
   text-transform: uppercase;
   margin-top: 13px;
+  flex-wrap: wrap;
 
   & svg {
     position: relative;
@@ -206,6 +207,7 @@
   }
 
   &:hover svg {
+    flex-shrink: 0;
     transform: translateX(5px);
   }
 

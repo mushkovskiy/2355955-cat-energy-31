@@ -13,6 +13,8 @@
   @include vp-1300 {
     width: 565px;
     background-color: $primary-white;
+    justify-content: flex-start;
+    padding: 60px 78px;
   }
 }
 
@@ -30,6 +32,10 @@
     font-size: 20px;
     line-height: 1.3em;
   }
+
+  @include vp-1300 {
+    margin-right: auto;
+  }
 }
 
 .contacts__text {
@@ -43,5 +49,16 @@
     font-size: 18px;
     line-height: 1.3em;
     text-align: end;
+  }
+
+
+  @include vp-1300 {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: flex-start;
+    text-align: start;
+    padding-left: 25px;
+    gap: 15px;
   }
 }

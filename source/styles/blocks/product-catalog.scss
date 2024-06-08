@@ -9,6 +9,7 @@
 
   @include vp-1300 {
     padding-top: 188px;
+    margin-bottom: 59px;
   }
 }
 
@@ -25,8 +26,8 @@
   }
 
   @include vp-1300 {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -55,12 +56,16 @@
       display: none;
     }
   }
+
+  @include vp-1300 {
+    padding-bottom: 98px;
+  }
 }
 
 
 .product-catalog__products-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 245px));
   list-style-type: none;
 
   @include vp-767 {
@@ -69,6 +74,10 @@
     & li:not(.products-card--empty)::after {
       display: none;
     }
+  }
+
+  @include vp-1300 {
+    gap: 63px 80px;
   }
 }
 
