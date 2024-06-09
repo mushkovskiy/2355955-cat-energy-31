@@ -12,14 +12,14 @@
 
 .page-footer__wrapper {
   position: relative;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 26px 20px;
   margin: 0 auto;
   max-width: 1300px;
 
   @include vp-767 {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 20px;
   }
 
   @include vp-1300 {
@@ -35,7 +35,7 @@
   @include vp-1300 {
     grid-row: 1;
     z-index: 1;
-    padding-top: 95px;
+    padding-top: 69px;
   }
 }
 
@@ -62,12 +62,12 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 55px 30px;
+    padding: 44px 30px;
   }
 
   @include vp-1300 {
     padding: 66px 40px;
-    align-items: start;
+    align-items: center;
   }
 }
 
@@ -87,8 +87,15 @@
   }
 }
 
+.page-footer__logo-text-link-wrapper {
+  @include vp-767 {
+    width: 165px;
+  }
+}
+
 .page-footer__logo-text-link {
-  padding-top: 40px;
+
+  padding-top: 14px;
   padding-bottom: 20px;
   grid-column: 1 / -1;
   position: relative;
@@ -119,26 +126,26 @@
   @include vp-767 {
     border: none;
     padding: 0;
+    align-items: unset;
   }
 
-
   @include vp-1300 {
-    top: 4px;
+    align-items: flex-start;
   }
 }
 
 .page-footer__social {
   background-color: $basic-grey;
   grid-column: 1 / -1;
-
-  @include vp-1300 {
-    position: relative;
-    left: 15px;
-    top: 7px;
-  }
+  align-items: center;
 }
 
 .page-footer__copyright {
   background-color: $basic-grey;
   grid-column: 1 / -1;
+
+
+  @include vp-767 {
+    width: 165px;
+  }
 }

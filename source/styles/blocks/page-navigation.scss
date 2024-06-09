@@ -1,6 +1,7 @@
 .page-navigation {
   font-weight: 400;
 
+
   @include vp-767 {
     margin-left: auto;
   }
@@ -48,8 +49,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 33px;
+    gap: 36px;
     position: static;
+    padding-top: 10px;
   }
 
   @include vp-1300 {
@@ -58,6 +60,7 @@
     background-color: transparent;
     padding-top: 10px;
     padding-left: 2px;
+    gap: 33px;
   }
 }
 
@@ -86,6 +89,14 @@
   line-height: 1em;
   text-transform: uppercase;
 
+  &:hover {
+    color: $nav-link-hover-state-catalog;
+  }
+
+  &:active {
+    color: $nav-link-active-state-catalog;
+  }
+
   @include vp-767 {
     position: relative;
 
@@ -113,6 +124,14 @@
 
 
 .page-navigation__item-link.page-navigation__item-link--primary-white {
+  &:hover {
+    color: $nav-link-hover-state-index;
+  }
+
+  &:active {
+    color: $nav-link-active-state-index;
+  }
+
   @include vp-1300 {
     color: $primary-white;
   }

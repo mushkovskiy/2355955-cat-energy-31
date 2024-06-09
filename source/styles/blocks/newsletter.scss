@@ -29,19 +29,36 @@
   text-transform: uppercase;
   filter: opacity(60);
   line-height: 1em;
-  border: 1px solid $special-grey;
+  border: 1px solid $input-border-color;
   padding: 0;
 
   @include vp-767 {
     height: 56px;
+    width: 376px;
   }
 
   @include vp-1300 {
     width: 496px;
   }
+
+  &:hover {
+    border-color: $special-grey;
+  }
+
+  &:focus {
+    border-color: $special-dark;
+  }
 }
 
 
 .newsletter__form button {
-  width: 256px;
+  font-size: 20px;
+
+  @include vp-767 {
+    width: 256px;
+  }
+}
+
+.input-error {
+  border-color: $status-error;
 }

@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 21px 20px 18px;
+  padding: 30px 20px 18px;
   font-weight: 400;
   background-color: $basic-grey;
 
@@ -15,6 +15,7 @@
     height: 50px;
     border-radius: 50%;
     background-color: $basic-green;
+    margin-top: -4px;
 
     @include vp-767 {
       position: static;
@@ -32,9 +33,17 @@
       width: 100px;
       height: 100px;
       place-self: self-start start;
+      margin-top: 7px;
     }
   }
 
+  &:last-child::after {
+    margin-top: -2px;
+
+    @include vp-1300 {
+      margin-top: 7px;
+    }
+  }
 
   &:first-child::before {
     content: "";
@@ -58,11 +67,13 @@
       width: 140px;
       height: 194px;
       place-self: center center;
+
+      margin-top: -30px;
     }
 
     @include vp-1300 {
       position: relative;
-      transform: translate(25%, -6px);
+      transform: translate(25%, 14px);
       grid-column: 1;
       grid-row: 1;
       width: 70px;
@@ -80,7 +91,7 @@
     width: 67px;
     height: 28px;
     left: 13px;
-    top: 32px;
+    top: 38px;
     mask-image: url("../../icons/stack.svg#tiger");
     mask-repeat: no-repeat;
 
@@ -93,6 +104,7 @@
       width: 280px;
       height: 112px;
       place-self: center center;
+      margin-top: -5px;
     }
 
     @include vp-1300 {
@@ -102,6 +114,7 @@
       height: 56px;
       transform: translateX(-15%);
       place-self: center start;
+      margin-top: 4px;
     }
   }
 
@@ -118,7 +131,8 @@
     grid-template-columns: 100px 1fr;
     padding: 44px 61px 65px 52px;
     column-gap: 60px;
-    min-width: 570px;
+    width: calc(50% - 30px);
+    max-width: 570px;
   }
 }
 
@@ -126,7 +140,8 @@
   font-size: 24px;
   line-height: 1.54em;
   margin-left: 70px;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
+  text-transform: uppercase;
 
   @include vp-767 {
     font-size: 36px;
@@ -173,7 +188,7 @@
     line-height: 1.5em;
     width: 340px;
     padding-bottom: 0;
-    margin-bottom: 48px;
+    margin-bottom: 44px;
 
     &::after {
       display: none;
@@ -183,7 +198,7 @@
   @include vp-1300 {
     grid-column: -1/ 1;
     grid-row: 2;
-    margin-bottom: 21px;
+    margin-bottom: 11px;
     margin-top: 43px;
     width: auto;
   }
@@ -197,18 +212,19 @@
   color: $primary-black;
   text-decoration: none;
   text-transform: uppercase;
-  margin-top: 13px;
-  flex-wrap: wrap;
+  margin-top: 20px;
+
 
   & svg {
+    display: block;
     position: relative;
-    right: 5px;
+    transform: translate(-5px);
     transition: transform 0.3s ease;
   }
 
   &:hover svg {
-    flex-shrink: 0;
-    transform: translateX(5px);
+
+    transform: translateX(0);
   }
 
   &:active {
@@ -219,10 +235,19 @@
     grid-column: 1/2;
     font-size: 20px;
     gap: 25px;
+    margin-top: 15px;
   }
 
   @include vp-1300 {
     grid-column: -1/ 1;
     gap: 30px;
   }
+}
+
+
+.programs-card__link-arrow {
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 24px;
+  height: 12px;
 }

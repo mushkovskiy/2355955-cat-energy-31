@@ -3,7 +3,9 @@ $primary-black: #000000;
 $primary-white: #ffffff;
 $basic-green:#68b738;
 $basic-green-hover:#5eaa2f;
+$basic-green-active:#c9e0ba;
 $basic-grey:#f2f2f2;
+$basic-grey-active:#bebebe;
 $basic-grey-light:#eaeaea;
 $basic-grey-brown:#d9d9d9;
 $special-grey-light:#ebebeb;
@@ -11,12 +13,21 @@ $special-grey:#cdcdcd;
 $special-grey-hover:#ebebeb;
 $special-grey-brown:#666666;
 $special-dark:#444444;
+$special-dark-grey:#111111;
 $special-dark-brown:#222222;
 $special-dark-hover:#3e3e3e;
 $special-dark-active:#6b6b6b;
 $status-error:#ff8282;
 $gradient-hero:#62a53a;
 
+$nav-link-hover-state-index:#c1dcb1;
+$nav-link-active-state-index:#a3cc8b;
+$nav-link-hover-state-catalog:#666666;
+$nav-link-active-state-catalog:#b3b3b3;
+
+$divider-active-button:#9ecc82;
+$input-border-color:#e7e7e7;
+$input-hover:#cdcdcd;
 /* font-family */
 $primary-font: "Oswald", "Arial";
 $secondary-font: "Lato" ,"Arial";

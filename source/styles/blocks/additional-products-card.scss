@@ -1,7 +1,7 @@
 .additional-products-card {
   position: relative;
   display: grid;
-  row-gap: 15px;
+  row-gap: 12px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   font-weight: 400;
@@ -11,7 +11,7 @@
   @include vp-767 {
     grid-template-columns: 1fr auto auto;
     grid-template-rows: repeat(2, auto);
-    column-gap: 50px;
+    gap: 25px 50px;
     border-bottom: none;
     padding: 26px 38px 28px;
 
@@ -63,8 +63,10 @@
 .additional-products-card__term {
   grid-column: 1;
   grid-row: 2;
+  margin-bottom: 1px;
 
   @include vp-767 {
+    margin-bottom: unset;
     grid-column: 2;
     grid-row: 1;
     font-size: 16px;
@@ -94,8 +96,11 @@
 
 .additional-products-card__button {
   grid-column: 1/ -1;
-  grid-row: 2;
+  grid-row: 3;
 
+  @include vp-767 {
+    grid-row: 2;
+  }
 
   @include vp-1300 {
     grid-column: 4;

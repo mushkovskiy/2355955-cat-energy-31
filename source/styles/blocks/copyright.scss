@@ -1,20 +1,25 @@
 .copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
   font-weight: 400;
-  padding: 20px 20px 40px;
+  text-decoration: none;
 
+  &:hover {
+    cursor: pointer;
+  }
 
   &:hover .copyright__logo {
     stroke: $basic-green;
   }
 
   &:active .copyright__logo {
-    opacity: 0.6;
+    stroke: $basic-green-active;
   }
 
   &:active .copyright__text {
-    opacity: 0.6;
+    color: $basic-grey-active;
   }
 
   @include vp-767 {

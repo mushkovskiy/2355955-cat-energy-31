@@ -1,12 +1,13 @@
 .contacts {
-  padding-top: 25px;
-  padding-bottom: 25px;
+
+
   display: flex;
   justify-content: space-between;
   font-weight: 400;
 
   @include vp-767 {
-    padding: 60px 70px;
+    padding: 38px 40px 37px;
+    // padding: 60px 40px;
     width: 100%;
   }
 
@@ -26,6 +27,9 @@
 .contacts__title {
   line-height: 1.25em;
   text-transform: uppercase;
+  width: 140px;
+  flex-shrink: 0;
+  color: $special-dark-grey;
 
   @include vp-767 {
     width: 165px;
@@ -42,13 +46,20 @@
   font-family: $secondary-font, $fallback-font;
   color: $special-dark;
   line-height: 1.25em;
-
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 5px;
 
   @include vp-767 {
     width: 185px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     text-align: end;
+    gap: 17px;
   }
 
 
@@ -60,5 +71,6 @@
     text-align: start;
     padding-left: 25px;
     gap: 15px;
+    align-items: flex-start;
   }
 }

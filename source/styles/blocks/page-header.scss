@@ -2,15 +2,6 @@
   font-weight: 400;
 
 
-  @include vp-1300 {
-    position: absolute;
-
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
   & .page-header__container {
     position: relative;
     display: flex;
@@ -25,7 +16,7 @@
       justify-content: flex-start;
       padding-bottom: 0;
       border-bottom: none;
-      margin-bottom: 65px;
+      margin-bottom: 38px;
       padding-top: 25px;
     }
 
@@ -39,6 +30,26 @@
   }
 }
 
+.page-header--absolute {
+  @include vp-1300 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.page-header--absolute .page-header__logo-image-link {
+  @include vp-767 {
+    margin-right: 23px;
+  }
+
+  @include vp-1300 {
+    margin-right: 24px;
+  }
+}
+
 .page-header__logo-image-link {
   &:hover {
     opacity: 0.8;
@@ -49,21 +60,23 @@
   }
 
   @include vp-767 {
-    margin-right: 13px;
+    margin-right: 19px;
+  }
+
+  @include vp-1300 {
+    margin-right: 19px;
   }
 }
 
 .page-header__logo-text {
+  margin-left: -4px;
+
   &:hover {
     opacity: 0.8;
   }
 
   &:active {
     opacity: 0.6;
-  }
-
-  @include vp-767 {
-    margin-right: 95px;
   }
 }
 

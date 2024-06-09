@@ -3,12 +3,12 @@
   padding-top: 27px;
 
   @include vp-767 {
-    margin-bottom: 74px;
+    margin-bottom: 68px;
   }
 
 
   @include vp-1300 {
-    padding-top: 188px;
+    padding-top: 75px;
     margin-bottom: 59px;
   }
 }
@@ -36,6 +36,7 @@
   padding-bottom: 41px;
   font-size: 36px;
   line-height: 1em;
+  font-weight: 400;
 
   &::before {
     content: "";
@@ -50,7 +51,7 @@
   @include vp-767 {
     font-size: 60px;
     line-height: 1em;
-    padding-bottom: 85px;
+    padding-bottom: 90px;
 
     &::before {
       display: none;
@@ -65,11 +66,13 @@
 
 .product-catalog__products-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 245px));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   list-style-type: none;
+  gap: 4px;
 
   @include vp-767 {
-    gap: 60px 60px;
+    gap: 68px 60px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 324px));
 
     & li:not(.products-card--empty)::after {
       display: none;
@@ -77,6 +80,7 @@
   }
 
   @include vp-1300 {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 245px));
     gap: 63px 80px;
   }
 }

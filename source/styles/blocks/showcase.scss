@@ -1,10 +1,11 @@
 .showcase {
+  --background-color: #f2f2f2;
   font-weight: 400;
   background-color: $basic-grey-light;
 
   @include vp-767 {
     background-color: transparent;
-    background-image: linear-gradient(to top, $basic-grey 0%, $basic-grey 462px, transparent 462px, transparent 100%);
+    background-image: linear-gradient(to top, var(--background-color) 462px, transparent 462px);
     background-size: 100% 100%;
   }
 }
@@ -19,16 +20,15 @@
 
 
   @include vp-767 {
-
     padding-bottom: 101px;
-    padding-top: 45px;
+    padding-top: 42px;
   }
 
   @include vp-1300 {
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: auto 1fr auto;
     padding-bottom: 90px;
     row-gap: 0;
-    padding-top: 7px;
+    padding-top: 26px;
   }
 }
 
@@ -37,10 +37,11 @@
   grid-column: 1 / -1;
   font-size: 36px;
   line-height: 1.1em;
+  font-weight: 400;
 
   @include vp-767 {
     font-size: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 37px;
   }
 
   @include vp-1300 {
@@ -63,37 +64,44 @@
     font-size: 16px;
     line-height: 1.5em;
     max-width: 710px;
-    margin-bottom: 55px;
+    margin-bottom: 38px;
   }
 
   @include vp-1300 {
     padding: 0;
-    margin: 0;
     grid-column: 1;
     grid-row: 2;
     align-self: center;
+    margin: 0;
+    margin-top: 80px;
     width: 440px;
-    margin-top: 42px;
   }
 }
 
 .showcase__info {
   grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
   @include vp-767 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 63px;
+    flex-direction: row;
   }
 
   @include vp-1300 {
     padding: 0;
-    margin: 0;
     grid-column: 1;
     grid-row: 3;
     flex-direction: column;
     align-items: flex-start;
-    place-self: center start;
+    place-self: end start;
     position: relative;
+    top: 10px;
+    gap: 53px;
+    margin: 0;
   }
 }
 
@@ -117,7 +125,7 @@
 
   @include vp-767 {
     width: 162px;
-    height: 77px;
+    height: 73px;
 
     &:first-child {
       margin-right: 43px;
@@ -157,25 +165,24 @@
   line-height: 1em;
   color: $special-dark;
   text-transform: lowercase;
-  width: fit-content;
-  background-color: $basic-grey-light;
+  background-color: var(--background-color);
   bottom: -5px;
   padding-left: 4px;
   padding-right: 4px;
+  width: 77px;
 
   @include vp-767 {
     font-size: 14px;
     background-color: $primary-white;
     width: fit-content;
     position: relative;
-    bottom: -5px;
+    bottom: -1px;
     padding-left: 8px;
     padding-right: 8px;
   }
 
   @include vp-1300 {
-    background-color: $basic-grey-light;
-
+    background-color: var(--background-color);
     margin-top: auto;
   }
 }
@@ -184,6 +191,7 @@
   order: -1;
   font-size: 24px;
   text-transform: uppercase;
+  margin-top: 3px;
 
   @include vp-767 {
     font-size: 30px;
@@ -204,20 +212,24 @@
   text-transform: uppercase;
 
   @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11px;
     margin-left: auto;
     font-size: 20px;
-    width: 175px;
+    line-height: 1;
     text-align: end;
-    line-height: 1.5em;
+    gap: 9px;
   }
 
   @include vp-1300 {
     margin: 0;
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     width: 100%;
-    position: relative;
-    top: 53px;
+    gap: 0;
+
 
     & span:first-child {
       margin-right: 66px;
